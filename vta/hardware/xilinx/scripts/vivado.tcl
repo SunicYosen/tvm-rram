@@ -420,8 +420,8 @@ add_files -norecurse $proj_path/$proj_name.srcs/sources_1/bd/$proj_name/hdl/${pr
 update_compile_order -fileset sources_1
 update_compile_order -fileset sim_1
 
-# Run bistream generation on 8 threads with performance oriented P&R strategy
-set num_threads 8
+# Run bistream generation on 4 threads with performance oriented P&R strategy
+set num_threads 4
 launch_runs impl_1 -to_step write_bitstream -jobs $num_threads
 wait_on_run impl_1
 
